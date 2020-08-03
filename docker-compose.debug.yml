@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  qtfirebaseanalysis:
+    image: qtfirebaseanalysis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: /bin/bash
+    command: -c "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 src"
+    ports:
+      - 5678:5678

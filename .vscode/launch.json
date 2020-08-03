@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "QtFirebaseCLI - verbose (DEBUG)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "general",
+                "args": [
+                    "-v"
+                ]
+            }
+        },
+        {
+            "name": "QtFirebaseCLI - silent dryrun (DEBUG)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "general",
+                "args": [
+                    "-q"
+                ]
+            }
+        }
+    ]
+}

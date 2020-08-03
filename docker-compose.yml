@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  qtfirebaseanalysis:
+    image: qtfirebaseanalysis
+    build:
+      context: .
+      dockerfile: Dockerfile
